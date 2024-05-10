@@ -4,8 +4,6 @@ import edu.princeton.cs.algs4.Interval1D;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-//import java.util.Arrays;
-
 public class Exercise2 {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
@@ -20,7 +18,7 @@ public class Exercise2 {
         for (int i = 0; i < interval1DS.length; i++) {
             for (int j = i + 1; j < interval1DS.length; j++) {
                 if (interval1DS[i].intersects(interval1DS[j])) {
-                    StdOut.printf(interval1DS[i] + "intersect" + interval1DS[j] + "\t");
+                    StdOut.printf(interval1DS[i] + " intersect " + interval1DS[j] + "\n");
                 }
             }
         }
@@ -43,6 +41,5 @@ public class Exercise2 {
             StdOut.print(interval1DS[i]);
         }
         StdOut.println();
-//        Arrays.stream(interval1DS).sorted();
     }
 }
