@@ -4,7 +4,7 @@ import edu.princeton.cs.algs4.Interval1D;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class Exercise2 {
     public static void main(String[] args) {
