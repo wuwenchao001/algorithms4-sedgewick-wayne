@@ -2,9 +2,10 @@ package com.chao.chapter1.session3;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class Exercise1isFull {
+public class Exercise1IsFull {
     public static void main(String[] args) {
         FixedCapacityStackOfStrings s = new FixedCapacityStackOfStrings(5);
+        StdOut.println("When initiated, is empty? " + s.isEmpty());
         StdOut.printf("Is full when empty? Expected false: %s \n", s.isFull());
         for (int i = 0; i < 5; i++) {
 //            s.push(StdIn.readString());
@@ -26,11 +27,6 @@ public class Exercise1isFull {
             return N == 0;
         }
 
-        /**
-         * Solution key code
-         *
-         * @return boolean
-         */
         public boolean isFull() {
             return N == a.length;
         }
