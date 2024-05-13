@@ -1,7 +1,7 @@
 package com.chao.chapter1.session3;
 
-import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Exercise4ParenthesesBalanced {
     public static void main(String[] args) {
@@ -22,8 +22,9 @@ public class Exercise4ParenthesesBalanced {
                     || c == ')' && stack.peek() == '('
                     || c == '}' && stack.peek() == '{'
                     || c == ']' && stack.peek() == '[') {
-                    stack.pop();
-                    continue;
+                // Should check the isEmpty before stack.peek? Yes to real engineering
+                stack.pop();
+                continue;
             } else {
                 continue;
             }
