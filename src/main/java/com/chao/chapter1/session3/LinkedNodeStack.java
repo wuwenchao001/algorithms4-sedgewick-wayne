@@ -1,7 +1,3 @@
-/**
- * None generic implementation
- * to upgrade this, use the <Item> item for generics.
- */
 package com.chao.chapter1.session3;
 
 import edu.princeton.cs.algs4.StdOut;
