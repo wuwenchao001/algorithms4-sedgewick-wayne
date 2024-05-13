@@ -15,11 +15,11 @@ public class Exercise3IntermixedSequence {
     }
 
     /**
-     * read 8 lines of numbers from Exersice3.txt file
+     * read 8 lines of numbers from "Exercise3.txt"
      */
     private static void readNumbers(int[][] a) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("src/main/java/com/chao/chapter1/session3/Exercise3.txt"));
-        try {
+        String fileName = "src/main/java/com/chao/chapter1/session3/Exercise3.txt";
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line = br.readLine();
 
             int lineNum = 0;
@@ -32,8 +32,6 @@ public class Exercise3IntermixedSequence {
                 lineNum++;
                 line = br.readLine();
             }
-        } finally {
-            br.close();
         }
     }
 
