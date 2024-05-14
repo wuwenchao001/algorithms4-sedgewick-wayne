@@ -1,0 +1,12 @@
+the integers 0, 1, ..., N-1 in that order (push directives) are intermixed with N minus signs (pop directives)
+
+// Proof:
+// Stack members from fist head to tail, become smaller.
+// Thus, the permutation integers either bigger than anyone before
+// (new Stack.push(newMaxInt) and then Stack.pop(newMaxInt))
+// or become smaller eventually.
+
+// Case Verification:
+// If and only if it has no forbidden triple, it can be generated.
+// reduction to absurdity > When not generated, it has forbidden triple.
+// see Exercise 45
