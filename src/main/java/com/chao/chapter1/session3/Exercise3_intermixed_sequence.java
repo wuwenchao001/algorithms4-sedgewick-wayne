@@ -7,21 +7,21 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Exercise3IntermixedSequence {
+public class Exercise3_intermixed_sequence {
     public static void main(String[] args) throws IOException {
-        int[][] testNumberLists = new int[8][10];
-        readNumbers(testNumberLists);
+        int[][] testNumberLists = readNumbers();
         testSequence(testNumberLists);
     }
 
     /**
      * read 8 lines of numbers from "Exercise3.txt"
      */
-    private static void readNumbers(int[][] a) throws IOException {
+    private static int[][] readNumbers() throws IOException {
         String fileName = "src/main/java/com/chao/chapter1/session3/Exercise3.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             String line = br.readLine();
 
+            int[][] a = new int[8][10];
             int lineNum = 0;
             while (line != null) {
                 String[] oneLineNumbers;
@@ -32,16 +32,17 @@ public class Exercise3IntermixedSequence {
                 lineNum++;
                 line = br.readLine();
             }
+            return a;
         }
     }
 
-    private static void testSequence(int[][] testNumberLists) {
+    private static void testSequence(int[][] a) {
         for (int k = 0; k < 8; k++) {
             Stack<Integer> s = new Stack<>();
 
             int i = 0, j = 0;
             while (i < 10 && j <= 10) {
-                if (!s.isEmpty() && s.peek() == testNumberLists[k][i]) {
+                if (!s.isEmpty() && s.peek() == a[k][i]) {
                     StdOut.print(s.pop() + " ");
                     i++;
                 } else {
