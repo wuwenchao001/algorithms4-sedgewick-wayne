@@ -1,0 +1,21 @@
+First induction: N numbers contain N*(N-1)/2 pairs
+N       Pairs
+2       2*1 = 2
+3       3*2/2 = 3
+4       4*3/2 = 6
+...
+Assume:
+N-1     (N-1)(N-2)/2
+Conclusion: the N-th new number pairs each of (N-1) old number
+N       (N-1)(N-2)/2 + (N-1) = N*(N-1)/2
+
+
+Second induction: N numbers contain N*(N-1)*(N-2)/6 triples
+N       Triples
+6
+7
+...
+Assume:
+N       N*(N-1)*(N-2)/6
+Conclude: the (N+1)th new number triples N*(N-1)/2 pairs of the N old number
+N+1     N*(N-1)*(N-2)/6 + N*(N-1)/2 = (N+1)*N*(N-1)/6
