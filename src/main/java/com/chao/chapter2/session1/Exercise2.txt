@@ -1,0 +1,4 @@
+Maximum of all: N-1
+Average of one: 2
+
+One exchange involves two elements.

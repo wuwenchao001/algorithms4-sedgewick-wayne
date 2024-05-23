@@ -1,6 +1,4 @@
-package com.chao.chapter1.session3;
-
-import edu.princeton.cs.algs4.Stack;
+package com.chao.chapter1.session3.utils;
 
 import java.util.Iterator;
 

@@ -1,0 +1,25 @@
+Exercise 5: Strictly inverted(decreasing) sequence.
+Both j > 0 && less(a[j], a[j - 1]) conditions are false,
+indicating that j = 0 and a[j].compareTo(a[j-1]) > 0.
+
+
+Exercise 6: Insertion.
+All inner loops of insertion sort are false the first time they are judged,
+and selection sort inner loops have to be judged n-i times, even though there will be no exchange.
+
+
+Exercise 7: Selection.
+Smaller number of exch() times.
+
+
+Exercise 8: Quadratic
+Compare or Exchange: Average ~( N^2 / 4)/3.  Worst case ~( N^2 / 2)/3.
+In this double-loop code, the inner code executes only one-third as many times as a normal insertion sort executes.
+{
+    for (int i = 1; i < N; i++) {
+        for (int j = i; j > 0 && less(a[j], a[j - 1]); j--)
+            exch(a, j, j - 1);
+    }
+}
+
+Exercise 10: See " /src/main/java/com/chao/chapter2/session1/utils/Shell_algorithm_2_3.java "

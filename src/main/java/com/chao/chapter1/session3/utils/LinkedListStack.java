@@ -1,8 +1,8 @@
-package com.chao.chapter1.session3;
+package com.chao.chapter1.session3.utils;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class LinkedNodeStack {
+public class LinkedListStack {
 
     private Node first = null;
     private int N = 0;
@@ -42,7 +42,7 @@ public class LinkedNodeStack {
     }
 
     public static void main(String[] args) {
-        LinkedNodeStack linkedStack = new LinkedNodeStack();
+        LinkedListStack linkedStack = new LinkedListStack();
         linkedStack.push(1);
         linkedStack.push(2);
         linkedStack.push(3);
