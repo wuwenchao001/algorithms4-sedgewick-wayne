@@ -1,6 +1,6 @@
-When it's time to spare your energy, spare it, and when it's time to be lazy, be lazy.
+When it's time to spare your energy, spare it.
 
-Of course SelectionSort only needs to be aligned N-1 which is the most friendly for most cases.
+Of course SelectionSort only needs to be aligned N-1 exchanges which is the most friendly for most cases.
 
 At the same time, we should take into account the local or spaced ordering of the crates themselves,
 and use a combination of SelectionSort, InsertionSort, or other methods.
