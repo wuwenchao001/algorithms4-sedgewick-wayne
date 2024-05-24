@@ -3,6 +3,8 @@ package com.chao.chapter2.session1.utils;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+import edu.princeton.cs.algs4.Insertion;
+
 // Page 251 ALGORITHM 2.2 Insertion sort
 public class Insertion_algorithm_2_2 {
 
