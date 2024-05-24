@@ -60,4 +60,17 @@ public class Exercise16_certification {
         System.out.println("Is the array sorted and preserves the set of objects? " + result);
     }
 
+//    public <T> boolean check(T[] array, Comparator<T> comparator) {
+//        T[] originalArray = Arrays.copyOf(array, array.length);
+//        Arrays.sort(array, comparator);
+//        return Arrays.equals(originalArray, array);
+//    }
+//
+//    public static void main(String[] args) {
+//        GeneralCertification certification = new GeneralCertification();
+//        Integer[] intArray = {5, 3, 8, 1};
+//        boolean result = certification.check(intArray, Integer::compareTo);
+//        System.out.println(result);
+//    }
+
 }
