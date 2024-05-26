@@ -2,7 +2,7 @@ package com.chao.chapter2.session1;
 
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
-import com.chao.chapter2.session1.utils.SortTypes;
+import com.chao.chapter2.session1.utils.SortType;
 
 public class Exercise17_animation {
 
@@ -35,7 +35,7 @@ public class Exercise17_animation {
                 }
             }
 
-            draw(array, i, minIndex, -1, SortTypes.SELECTION);
+            draw(array, i, minIndex, -1, SortType.SELECTION);
 
             Comparable temp = array[i];
             array[i] = array[minIndex];
@@ -52,7 +52,7 @@ public class Exercise17_animation {
                 array[j] = array[j - 1];
                 array[j - 1] = temp;
             }
-            draw(array, i, j, -1, SortTypes.INSERTION);
+            draw(array, i, j, -1, SortType.INSERTION);
         }
     }
 
@@ -74,14 +74,14 @@ public class Exercise17_animation {
                     array[j] = array[j - incrementSequence];
                     array[j - incrementSequence] = temp;
                 }
-                draw(array, i, j, incrementSequence, SortTypes.SHELL);
+                draw(array, i, j, incrementSequence, SortType.SHELL);
             }
 
             incrementSequence /= 3;
         }
     }
 
-    private static void draw(Comparable[] array, int ith, int jth, int shellSortIncrement, SortTypes sortType) {
+    private static void draw(Comparable[] array, int ith, int jth, int shellSortIncrement, SortType sortType) {
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

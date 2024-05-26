@@ -3,8 +3,8 @@ package com.chao.chapter2.session1;
 import edu.princeton.cs.algs4.Date;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Exercise20_comparable_transactions {
-    public Exercise20_comparable_transactions() {
+public class Exercise21_comparable_transactions {
+    public Exercise21_comparable_transactions() {
     }
 
     public static void main(String[] args) {

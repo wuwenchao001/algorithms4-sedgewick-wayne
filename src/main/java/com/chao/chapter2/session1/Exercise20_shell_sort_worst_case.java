@@ -1,6 +1,6 @@
 package com.chao.chapter2.session1;
 
-public class Exercise19_shell_sort_worst_case {
+public class Exercise20_shell_sort_worst_case {
 //}
 //public class ShellSort {
     private static final int[] INCREMENTS = {40, 13, 4, 1};
