@@ -5,4 +5,6 @@ public enum SortType {
     INSERTION,
     SHELL,
     INSERTION_PRIMITIVE,
+    SHELLSORT_INCREMENT,
+    SHELL_2_3
 }

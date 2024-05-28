@@ -1,10 +1,10 @@
 package com.chao.chapter2.session1;
 
-import com.chao.chapter2.session1.utils.SortCompare;
+import com.chao.chapter2.session1.utils.SortCompare_string;
 
 public class Exercise25_insertion_sort_without_exchanges {
     public static void main(String[] args) {
-        SortCompare.compare(new String[]{"InsertionSortWithoutExchanges", "Insertion", "100", "10"});
+        SortCompare_string.compare(new String[]{"InsertionSortWithoutExchanges", "Insertion", "100", "10"});
     }
 
     public class InsertionSortWithoutExchanges {

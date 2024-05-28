@@ -3,7 +3,7 @@ package com.chao.chapter2.session1.utils;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-// Page 259 ALGORITHM 2.3 Shellsort
+// Page 259 ALGORITHM 2.3 Shellsortw
 public class Shell_algorithm_2_3 {
 
     public static void sort(Comparable[] a) {  // Sort a[] into increasing order.
