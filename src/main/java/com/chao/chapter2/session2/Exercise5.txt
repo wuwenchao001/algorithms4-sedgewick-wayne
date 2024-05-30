@@ -1,0 +1,53 @@
+2.2.5
+
+Top-down mergesort:
+2, 3, 2, 5, 2, 3, 2, 5, 10, 2, 3, 2, 5, 2, 3, 2, 5, 10, 20, 2, 3, 2, 5, 2, 3, 2, 5, 10, 2, 3, 2, 5, 2, 2, 4, 9, 19, 39.
+
+Bottom-up mergesort:
+2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 8, 8, 8, 8, 7, 16, 16, 32, 39.
+
+
+For a merge sort algorithm,
+the sequence of subarray sizes during the merges varies depending on
+whether it's a top-down or bottom-up approach.
+
+**Top-Down Mergesort:**
+
+In a top-down mergesort,
+the array is recursively divided in half until we have subarrays of size 1.
+Then, these subarrays are merged back together in the order they were split.
+
+For N = 39, the sequence of subarray sizes during the merges would be:
+0-19, 20-38
+1-20, 20-39
+
+
+1-1, 1-1, 2-1,
+1-1, 2-1, 4-1,
+1-1, 2-1,
+1-1, 2-1, 4-1, 8-1,
+1-1, 2-1,
+1-1, 2-1, 4-1,
+1-1, 2-1,
+1-1, 2-1, 4-1, 8-1,
+16-1, 32-7
+
+
+**Bottom-Up Mergesort:**
+
+In a bottom-up mergesort,
+the algorithm starts by considering each element as a subarray of size 1,
+then merges adjacent subarrays in pairs to create sorted subarrays of size 2,
+then 4, then 8, and so on, until the entire array is sorted.
+For N = 39, the sequence of subarray sizes during the merges would be:
+
+1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1, 1-1,
+2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-2, 2-1,
+4-4, 4-4, 4-4, 4-4, 4-4, 4-3,
+8-8, 8-8, 8-7,
+16-16, 16-7,
+32-7
+
+Please note that the numbers represent the sizes of the two subarrays being merged at each step.
+For example, "1-1" means two subarrays of size 1 are being merged,
+"2-1" means a subarray of size 2 is being merged with a subarray of size 1, and so on.

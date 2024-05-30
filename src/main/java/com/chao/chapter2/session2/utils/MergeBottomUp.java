@@ -2,7 +2,8 @@ package com.chao.chapter2.session2.utils;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class MergeBU {
+// Page 278
+public class MergeBottomUp {
     private static Comparable[] aux;      // auxiliary array for merges
 
     public static void sort(Comparable[] a) {  // Do lg N passes of pairwise merges.
