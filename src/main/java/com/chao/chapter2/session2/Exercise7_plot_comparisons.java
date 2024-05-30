@@ -1,6 +1,7 @@
 /**
  * TODO 没看到上界啊？？upper bound 6N lg N 哪里来的？
  */
+
 package com.chao.chapter2.session2;
 
 import edu.princeton.cs.algs4.StdDraw;
