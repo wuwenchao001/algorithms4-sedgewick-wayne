@@ -1,10 +1,10 @@
 package com.chao.chapter2.session1;
 
-import com.chao.chapter2.session1.utils.SortCompare_string;
+import com.chao.chapter2.session1.utils.SortCompare_string_parameter;
 
 public class Exercise24_insertion_sort_with_sentinel {
     public static void main(String[] args) {
-        SortCompare_string.compare(new String[]{"Insertion", "InsertionSortWithSentinel", "1000", "10"});
+        SortCompare_string_parameter.compare(new String[]{"Insertion", "InsertionSortWithSentinel", "1000", "10"});
     }
 
     public class InsertionSortWithSentinel {

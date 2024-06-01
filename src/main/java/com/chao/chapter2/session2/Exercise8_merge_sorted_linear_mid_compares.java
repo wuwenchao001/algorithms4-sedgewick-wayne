@@ -1,14 +1,16 @@
+/**
+ *  Since this condition is checked once for each recursive call to sort(),
+ *  and the sort() method is called N times for an array of length N
+ *  (once for each element),
+ *  the total number of comparisons is linear in the size of the array.
+ */
 package com.chao.chapter2.session2;
 
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Exercise8_mid {
+public class Exercise8_merge_sorted_linear_mid_compares {
     public static void main(String[] args) {
-        // Since this condition is checked once for each recursive call to sort(),
-        // and the sort() method is called N times for an array of length N
-        // (once for each element),
-        // the total number of comparisons is linear in the size of the array.
         int maxN = 5000;
 
         StdDraw.setXscale(0, maxN);
@@ -23,7 +25,7 @@ public class Exercise8_mid {
             Merge.sort(a);
             int comparisons = Merge.getComparisons();
             double ratio = comparisons / (double) N; //  approximate 1
-//            StdOut.println(ratio);
+            StdOut.println(ratio);
 
             StdDraw.setPenColor(StdDraw.LIGHT_GRAY);
             StdDraw.point(N, comparisons);

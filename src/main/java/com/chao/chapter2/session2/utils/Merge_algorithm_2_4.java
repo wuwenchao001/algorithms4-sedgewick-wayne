@@ -3,8 +3,15 @@ package com.chao.chapter2.session2.utils;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
+import edu.princeton.cs.algs4.Merge;
+
 // Page 273 ALGORITHM 2.4 Top-down mergesort
 public class Merge_algorithm_2_4 {
+
+    // static aux[] is inadvisable for a library Class
+    // see Exercise 2.2.9
+    // the edu.princeton.cs.algs4.Merge has no static aux[]
+    //
     private static Comparable[] aux;      // auxiliary array for merges
 
     public static void sort(Comparable[] a) {

@@ -4,7 +4,7 @@ import com.chao.chapter2.session1.Exercise24_insertion_sort_with_sentinel.Insert
 import com.chao.chapter2.session1.Exercise25_insertion_sort_without_exchanges.InsertionSortWithoutExchanges;
 import edu.princeton.cs.algs4.*;
 
-public class SortCompare_string {
+public class SortCompare_string_parameter {
     public static void main(String[] args) {
         compare(args);
     }

@@ -16,7 +16,7 @@ public class Exercise30_geometric_increments {
             a[i] = StdRandom.uniform(-1000000, 1000000);
         }
 
-        int bestT = 0;   // If you extend the range of values of t to Double,
+        int bestT = 0;   // If you extend the range of values of t/bestT/time to Double,
         double bestTime = Double.POSITIVE_INFINITY; // you may have even more extreme minimum times
 
         for (int t = 2; t <= 10; t++) {
