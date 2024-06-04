@@ -2,53 +2,74 @@ package com.chao.chapter1.session2;
 
 import edu.princeton.cs.algs4.*;
 
-public class Exercise3 {
+/**
+ *  1.2.3
+ *  Write an Interval2D client that takes command-line arguments N, min,and max
+ *  and generates N random 2D intervals
+ *  whose width and height are uniformly distributed between min and max in the unit square.
+ *  Draw them on StdDraw
+ *  and print the number of pairs of intervals that intersect
+ *  and the number of intervals that are contained in one another.
+ */
+public class Exercise3_Interval2D {
     public static void main(String[] args) {
+        numbersAndDraw();
+    }
+
+    public static void numbersAndDraw() {
         StdOut.printf("Input the arguments N, min, and max and generates " +
                 "N random 2D intervals whose width and height are uniformly " +
-                "distributed between min and max: ");
-        String readString = StdIn.readLine();
-        String[] strings = readString.split("/");
+                "distributed between min and max. \nN min max:\n");
+        String readString = StdIn.readLine(); //10 1.1 11.11
+        String[] strings = readString.split("\\s");
         int n = Integer.parseInt(strings[0]);
-        int min = Integer.parseInt(strings[1]);
-        int max = Integer.parseInt(strings[2]);
+        Double min = Double.parseDouble(strings[1]);
+        Double max = Double.parseDouble(strings[2]);
+
+        StdDraw.setCanvasSize(512, 512);
+        StdDraw.setPenRadius(0.001);
+        StdDraw.setXscale(min, max);
+        StdDraw.setYscale(min, max);
+        StdDraw.setPenColor(StdDraw.BLUE);
 
         Interval2D[] interval2DS = new Interval2D[n];
-        Point2D[][] point2DSS = new Point2D[n][2];
+        Point2D[][] point2DS = new Point2D[n][2];
 
         for (int i = 0; i < n; i++) {
-            int pointX1 = StdRandom.uniform(min, max);
-            int pointX2 = StdRandom.uniform(min, max);
-            if (pointX1 > pointX2) {
-                pointX1 = pointX1 - pointX2;
-                pointX2 = pointX1 + pointX2;
-                pointX1 = -(pointX1 - pointX2);
+            double x1 = StdRandom.uniform(min, max);
+            double x2 = StdRandom.uniform(min, max);
+            if (x1 > x2) {
+                double temp = x1;
+                x1 = x2;
+                x2 = temp;
+                //not stable
+//                x1 = x1 - x2;
+//                x2 = x1 + x2;
+//                x1 = -(x1 - x2);
+            }
+            double y1 = StdRandom.uniform(min, max);
+            double y2 = StdRandom.uniform(min, max);
+            if (y1 > y2) {
+                double y = y1;
+                y1 = y2;
+                y2 = y;
             }
 
-            int pointY1 = StdRandom.uniform(min, max);
-            int pointY2 = StdRandom.uniform(min, max);
-            if (pointY1 > pointY2) {
-                pointY1 = pointY1 - pointY2;
-                pointY2 = pointY1 + pointY2;
-                pointY1 = -(pointY1 - pointX2);
-            }
-
-            Interval1D interval1DX = new Interval1D(pointX1, pointX2);
-            Interval1D interval1DY = new Interval1D(pointY1, pointY2);
-            // TODO: Somehow, line 37 occasionally goes wrong
+            Interval1D interval1DX = new Interval1D(x1, x2);
+            Interval1D interval1DY = new Interval1D(y1, y2); //
 
             interval2DS[i] = new Interval2D(interval1DX, interval1DY);
+            interval2DS[i].draw();
 
-            // Because lines and points in the interval2D class are private, we save them when we create them
-            // These two points are the two on the diagonal of the rectangle interval2DS[i]
-            point2DSS[i][0] = new Point2D(pointX1, pointY1);
-            point2DSS[i][1] = new Point2D(pointX2, pointY2);
+            // save the diagonal of the rectangle interval2DS[i] in point2DS
+            point2DS[i][0] = new Point2D(x1, y1);
+            point2DS[i][1] = new Point2D(x2, y2);
         }
 
         int countIntersectNum = countIntersect(interval2DS);
         StdOut.printf("Intersect interval2D numbers: %s \n", countIntersectNum);
 
-        int countContainedNum = countContained(interval2DS, point2DSS);
+        int countContainedNum = countContained(interval2DS, point2DS);
         StdOut.printf("Contained interval2D numbers: %s", countContainedNum);
     }
 
@@ -64,7 +85,6 @@ public class Exercise3 {
 
     private static int countContained(Interval2D[] interval2Ds, Point2D[][] point2DSS) {
         int count = 0;
-
 //        // cannot access the x and y
 //        for (int i = 0; i < interval2DS.length; i++) {
 //            for (int j = 0; j < interval2DS.length; j++) {
@@ -74,7 +94,6 @@ public class Exercise3 {
 //                        interval2DS[i].contains(interval2DS[j].x.min)) count++;
 //            }
 //        }
-
         for (int i = 0; i < interval2Ds.length; i++) {
             for (int j = i + 1; j < interval2Ds.length; j++) {
                 if ( interval2Ds[i].contains(point2DSS[j][0]) && interval2Ds[i].contains(point2DSS[j][1])

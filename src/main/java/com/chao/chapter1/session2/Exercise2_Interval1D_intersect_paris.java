@@ -4,9 +4,15 @@ import edu.princeton.cs.algs4.Interval1D;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-public class Exercise2 {
+/**
+ *  1.2.2
+ *  Write an Interval1D client that takes an int value N as command-line argument,
+ *  reads N intervals (each defined by a pair of double values) from standard input,
+ *  and prints all pairs that intersect.
+ */
+public class Exercise2_Interval1D_intersect_paris {
     public static void main(String[] args) {
-        int n = Integer.parseInt(args[0]);
+        int n = Integer.parseInt(args[0]);  // 5
         Interval1D[] interval1DS = new Interval1D[n];
 
         createInterval1DArray(interval1DS);
@@ -26,9 +32,9 @@ public class Exercise2 {
 
     private static void createInterval1DArray(Interval1D[] interval1DS) {
         int n = interval1DS.length;
-        StdOut.printf("Please input %s pairs of Double numbers: \n", n);
+        StdOut.printf("Please input %s pairs of Double numbers: \n", n); // 2 3 3 4 4 5 5 6 2 6
         String ss = StdIn.readLine();
-        String[] s = ss.split("/");
+        String[] s = ss.split("\\s");
         for (int i = 0; i < n; i++) {
             int start = Integer.parseInt(s[2 * i]);
             int end = Integer.parseInt(s[2 * i + 1]);

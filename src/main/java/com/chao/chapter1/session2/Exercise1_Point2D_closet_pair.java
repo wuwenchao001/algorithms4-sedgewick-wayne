@@ -11,7 +11,7 @@ import edu.princeton.cs.algs4.StdRandom;
  * generates N random points in the unit square,
  * and computes the distance separating the closest pair of points.
  */
-public class Exercise1 extends Throwable {
+public class Exercise1_Point2D_closet_pair extends Throwable {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
 
@@ -37,8 +37,11 @@ public class Exercise1 extends Throwable {
         StdDraw.setXscale(0, 1);
         StdDraw.setYscale(0, 1);
 
-        for (int i = 0; i < point2DS.length; i++) {
-            StdDraw.point(point2DS[i].x(), point2DS[i].y());
+        // Replace
+        // { for (int i = 0; i < point2DS.length; i++) {StdDraw.point(point2DS[i].x(), point2DS[i].y());} }
+        // with enhanced "for"
+        for (Point2D point2D : point2DS) {
+            StdDraw.point(point2D.x(), point2D.y());
         }
     }
 
