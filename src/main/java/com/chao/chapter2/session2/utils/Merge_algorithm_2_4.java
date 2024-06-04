@@ -3,8 +3,6 @@ package com.chao.chapter2.session2.utils;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-import edu.princeton.cs.algs4.Merge;
-
 // Page 273 ALGORITHM 2.4 Top-down mergesort
 public class Merge_algorithm_2_4 {
 
@@ -32,7 +30,7 @@ public class Merge_algorithm_2_4 {
     {  // Merge a[lo..mid] with a[mid+1..hi].
         int i = lo, j = mid+1;
         for (int k = lo; k <= hi; k++)  // Copy a[lo..hi] to aux[lo..hi].
-            aux[k] = a[k];
+            aux[k] = a[k];  // 为什么在这里一个个进行copy，一开始直接ArrayCopy array.clone嘛
         for (int k = lo; k <= hi; k++)  // Merge back to a[lo..hi].
             if      (i > mid)              a[k] = aux[j++];
             else if (j > hi )              a[k] = aux[i++];

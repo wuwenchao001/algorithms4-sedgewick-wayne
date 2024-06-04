@@ -1,14 +1,18 @@
-/**
- *  Since this condition is checked once for each recursive call to sort(),
- *  and the sort() method is called N times for an array of length N
- *  (once for each element),
- *  the total number of comparisons is linear in the size of the array.
- */
+// Since this condition is checked once for each recursive call to sort(),
+// and the sort() method is called N times for an array of length N
+// (once for each element),
+// the total number of comparisons is linear in the size of the array.
+
 package com.chao.chapter2.session2;
 
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
+/**
+ * 2.2.8
+ * Suppose that Algorithm 2.4 is modified to skip the call on merge() whenever a[mid] <= a[mid+1].
+ * Prove that the number of compares used to merge sort a sorted array is linear.
+ */
 public class Exercise8_merge_sorted_linear_mid_compares {
     public static void main(String[] args) {
         int maxN = 5000;
@@ -24,7 +28,7 @@ public class Exercise8_merge_sorted_linear_mid_compares {
             }
             Merge.sort(a);
             int comparisons = Merge.getComparisons();
-            double ratio = comparisons / (double) N; //  approximate 1
+            double ratio = comparisons / (double) N; //  Ratio is approximate 1.
             StdOut.println(ratio);
 
             StdDraw.setPenColor(StdDraw.LIGHT_GRAY);
@@ -46,12 +50,15 @@ public class Exercise8_merge_sorted_linear_mid_compares {
             sort(a, 0, a.length - 1);
         }
 
+        /**
+         * The primary logic code for the solution.
+         */
         private static void sort(Comparable[] a, int lo, int hi) {
             if (hi <= lo) return;
             int mid = lo + (hi - lo) / 2;
             sort(a, lo, mid);
             sort(a, mid + 1, hi);
-            if (less(a[mid+1],a[mid])) { // Merge or not
+            if (less(a[mid+1],a[mid])) { // Merge or not?
                 merge(a, lo, mid, hi);
             }
         }
