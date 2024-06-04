@@ -1,0 +1,11 @@
+This is a very efficient operation,
+doesn't involve copying the arrays,
+doesn't affected by the size of the arrays,
+
+To swap the references.
+it simply changes the references,
+which is a constant time operation, i.e., O(1).
+
+int[] t = a; // t now references the same array as a
+a = b;       // a now references the same array as b
+b = t;       // b now references the same array as t, which is the original array a
