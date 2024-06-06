@@ -1,0 +1,13 @@
+Welford's algorithm:
+
+
+The mean method simply returns the current mean m.
+
+The var method returns the variance,
+which is the sum of the squares of differences from the mean (s), divided by (N - 1).
+The -1 is because we're calculating the sample variance, not the population variance.
+
+The stddev method returns the standard deviation, which is the square root of the variance.
+
+This implementation is correct and will correctly compute the mean, variance,
+and standard deviation of the numbers presented as arguments to addDataValue.
