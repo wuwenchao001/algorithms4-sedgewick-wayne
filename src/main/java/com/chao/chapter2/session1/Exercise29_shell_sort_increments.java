@@ -1,7 +1,7 @@
 package com.chao.chapter2.session1;
 
-import com.chao.chapter2.session1.utils.SortCompare;
-import com.chao.chapter2.session1.utils.SortType;
+import com.chao.chapter2.session1.util.SortCompare;
+import com.chao.chapter2.session1.util.SortType;
 import edu.princeton.cs.algs4.StdOut;
 
 public class Exercise29_shell_sort_increments {

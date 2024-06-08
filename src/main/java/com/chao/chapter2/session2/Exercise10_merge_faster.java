@@ -29,7 +29,7 @@ public class Exercise10_merge_faster {
         }
     }
 
-    private static class Merge {
+    public class Merge {
 
         public static void sort(Comparable[] a) {
             Comparable[] aux = new Comparable[a.length];

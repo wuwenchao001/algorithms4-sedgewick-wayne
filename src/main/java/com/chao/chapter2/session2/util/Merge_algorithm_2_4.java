@@ -1,4 +1,4 @@
-package com.chao.chapter2.session2.utils;
+package com.chao.chapter2.session2.util;
 
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;

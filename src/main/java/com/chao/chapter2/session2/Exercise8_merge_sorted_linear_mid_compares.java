@@ -36,7 +36,14 @@ public class Exercise8_merge_sorted_linear_mid_compares {
         }
     }
 
-    private static class Merge {
+    public class Merge {
+
+        // For Exercise 24
+        private static int successes = 0;
+        public static int getSuccesses() {
+            return successes;
+        }
+
         private static Comparable[] aux;
         private static int comparisons = 0;
 
@@ -46,6 +53,7 @@ public class Exercise8_merge_sorted_linear_mid_compares {
 
         public static void sort(Comparable[] a) {
             comparisons = 0;
+            successes = 0; // set 0 every time, as it is static
             aux = new Comparable[a.length];
             sort(a, 0, a.length - 1);
         }
@@ -60,7 +68,9 @@ public class Exercise8_merge_sorted_linear_mid_compares {
             sort(a, mid + 1, hi);
             if (less(a[mid+1],a[mid])) { // Merge or not?
                 merge(a, lo, mid, hi);
+                return;
             }
+            successes++;
         }
 
         public static void merge(Comparable[] a, int lo, int mid, int hi) {

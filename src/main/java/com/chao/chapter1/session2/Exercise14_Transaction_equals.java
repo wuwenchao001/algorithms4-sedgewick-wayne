@@ -1,6 +1,6 @@
 package com.chao.chapter1.session2;
 
-import com.chao.chapter1.session2.utils.Date;
+import com.chao.chapter1.session2.util.Date;
 import edu.princeton.cs.algs4.StdOut;
 
 /**

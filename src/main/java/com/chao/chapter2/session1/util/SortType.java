@@ -1,4 +1,4 @@
-package com.chao.chapter2.session1.utils;
+package com.chao.chapter2.session1.util;
 
 public enum SortType {
     SELECTION,

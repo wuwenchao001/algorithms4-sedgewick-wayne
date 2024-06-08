@@ -1,6 +1,6 @@
 package com.chao.chapter2.session1;
 
-import com.chao.chapter2.session1.utils.SortCompare_string_parameter;
+import com.chao.chapter2.session1.util.SortCompare_string_parameter;
 
 public class Exercise25_insertion_sort_without_exchanges {
     public static void main(String[] args) {

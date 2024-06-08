@@ -1,4 +1,4 @@
-package com.chao.chapter2.session1.utils;
+package com.chao.chapter2.session1.util;
 
 import edu.princeton.cs.algs4.Insertion;
 import edu.princeton.cs.algs4.Selection;

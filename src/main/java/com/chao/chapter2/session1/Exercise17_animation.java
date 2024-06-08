@@ -2,7 +2,7 @@ package com.chao.chapter2.session1;
 
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdRandom;
-import com.chao.chapter2.session1.utils.SortType;
+import com.chao.chapter2.session1.util.SortType;
 
 public class Exercise17_animation {
 

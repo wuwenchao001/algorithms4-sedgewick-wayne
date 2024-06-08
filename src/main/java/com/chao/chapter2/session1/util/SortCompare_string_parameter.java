@@ -1,4 +1,4 @@
-package com.chao.chapter2.session1.utils;
+package com.chao.chapter2.session1.util;
 
 import com.chao.chapter2.session1.Exercise24_insertion_sort_with_sentinel.InsertionSortWithSentinel;
 import com.chao.chapter2.session1.Exercise25_insertion_sort_without_exchanges.InsertionSortWithoutExchanges;

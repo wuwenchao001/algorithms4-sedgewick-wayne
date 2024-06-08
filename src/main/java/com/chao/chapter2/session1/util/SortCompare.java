@@ -1,4 +1,4 @@
-package com.chao.chapter2.session1.utils;
+package com.chao.chapter2.session1.util;
 
 import com.chao.chapter2.session1.Exercise29_shell_sort_increments.ShellSort_increment;
 import edu.princeton.cs.algs4.*;

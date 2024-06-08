@@ -1,4 +1,4 @@
-package com.chao.chapter1.session3.utils;
+package com.chao.chapter1.session3.util;
 
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;

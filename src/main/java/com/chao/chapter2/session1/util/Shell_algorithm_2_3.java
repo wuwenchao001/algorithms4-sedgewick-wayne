@@ -1,18 +1,28 @@
-package com.chao.chapter2.session1.utils;
+package com.chao.chapter2.session1.util;
 
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-// Page 249 ALGORITHM 2.1 Selection sort
-public class Selection_algorithm_2_1 {
+// Page 259 ALGORITHM 2.3 Shellsortw
+public class Shell_algorithm_2_3 {
 
     public static void sort(Comparable[] a) {  // Sort a[] into increasing order.
-        int N = a.length;               // array length
-        for (int i = 0; i < N; i++) {  // Exchange a[i] with smallest entry in a[i+1...N).
-            int min = i;                 // index of minimal entr.
-            for (int j = i + 1; j < N; j++)
-                if (less(a[j], a[min])) min = j;
-            exch(a, i, min);
+        int N = a.length;
+        int h = 1;
+        while (h < N / 3) h = 3 * h + 1; // 1, 4, 13, 40, 121, 364, 1093, ...
+        while (h >= 1) {  // h-sort the array.
+            for (int i = h; i < N; i++) {  // Insert a[i] among a[i-h], a[i-2*h], a[i-3*h]... .
+                //
+                //  Explain why local h-sort uses the insertion form:
+                // The less-than condition is inside the for loop.
+                // Because i increase (and j decrease).
+                // Increasing i means that the previous part, starting from the beginning,
+                // has been sequenced at a larger h interval, or at the current h interval.
+                //
+                for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
+                    exch(a, j, j - h);
+            }
+            h = h / 3;
         }
     }
 
@@ -45,4 +55,6 @@ public class Selection_algorithm_2_1 {
         assert isSorted(a);
         show(a);
     }
+
 }
+

@@ -1,4 +1,4 @@
-package com.chao.chapter1.session2.utils;
+package com.chao.chapter1.session2.util;
 
 /**
  * Page 91 An abstract data type to encapsulate dates.
