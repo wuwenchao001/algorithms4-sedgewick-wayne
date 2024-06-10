@@ -56,11 +56,11 @@ public class Exercise26_aux_creation {
         }
 
         private static void merge(Comparable[] a, int lo, int mid, int hi) {
-            Comparable[] aux = new Comparable[hi -lo + 1];  // in merge(){}
+            Comparable[] aux = new Comparable[hi - lo + 1];  // in merge(){}
 
             // Copy to aux[]
             for (int k = lo; k <= hi; k++) {
-                aux[k-lo] = a[k];
+                aux[k - lo] = a[k];
             }
 
             // Merge back to a[]
@@ -79,9 +79,6 @@ public class Exercise26_aux_creation {
             Stopwatch timer = new Stopwatch();
             if (alg.equals("MergesortWithAuxInSort")) MergesortWithAuxInSort.sort(a);
             if (alg.equals("MergesortWithAuxInMerge")) MergesortWithAuxInMerge.sort(a);
-//            for (int i = 0; i < a.length; i++) {
-//                StdOut.print(a[i] + " ");
-//            }
             return timer.elapsedTime();
         }
 
@@ -93,15 +90,28 @@ public class Exercise26_aux_creation {
                     a[i] = StdRandom.uniform();
                 total += time(alg, a);
             }
+            StdOut.printf("total sorting time of %s is %.2f\n", alg, total);
             return total;
         }
     }
 
     public static void main(String[] args) {
-        String alg1 = "MergesortWithAuxInSort";
-        String alg2 = "MergesortWithAuxInMerge";
-        int N = 100000; // Integer.parseInt(args[2]);
-        int T = 3;    //Integer.parseInt(args[3]);
+        String alg1;
+        String alg2;
+        int N;
+        int T;
+        if (args != null && args.length > 0) {
+            alg1 = args[0];
+            alg2 = args[1];
+            N = Integer.parseInt(args[2]);
+            T = Integer.parseInt(args[3]);
+        } else {
+            alg1 = "MergesortWithAuxInSort";
+            alg2 = "MergesortWithAuxInMerge";
+            N = 100000; // Integer.parseInt(args[2]);
+            T = 3;    //Integer.parseInt(args[3]);
+        }
+
         double t1 = SortCompare.timeRandomInput(alg1, N, T);
         double t2 = SortCompare.timeRandomInput(alg2, N, T);
         StdOut.printf("For %d random Doubles\n    %s is", N, alg1);
